@@ -101,9 +101,7 @@ button:hover{background:#ff4d6d;transform:scale(1.05);}
 
 <body>
 
-<audio id="bgMusic" loop>
-    <source src="/music.mp3" type="audio/mp3">
-</audio>
+<audio id="bgMusic" loop></audio>
 
 <div class="container">
     <h1>Happy Rose Day ❤️</h1>
@@ -140,11 +138,16 @@ function typeWriter(){
     }
 }
 
-// START ON BUTTON TAP (for music autoplay rules)
+<script>
+const musicURL = "https://files.catbox.moe/9q0u47.mp3";
+
 function startExperience(){
-    document.getElementById("bgMusic").play();
+    const audio = document.getElementById("bgMusic");
+    audio.src = musicURL;
+    audio.play();
     typeWriter();
 }
+</script>
 
 // FALLING PETALS
 for(let i=0;i<30;i++){
@@ -175,5 +178,6 @@ setInterval(updateCountdown,1000);
 
 </body>
 </html>
+
 
 
